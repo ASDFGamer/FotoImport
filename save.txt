@@ -1,0 +1,4 @@
+test:true
+geht:1
+path_load:C:\\test
+path_save:C:\\test2

@@ -1,0 +1,3 @@
+path_load:C:\\test
+path_save:C:\\test2
+rename:false

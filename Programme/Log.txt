@@ -1,0 +1,6 @@
+[Info] [19:15:48] [ main.Main ] Start
+[Info] [19:15:48] [ hilfreich.Load_txt ] Versucht die Eintellungen zu laden
+[__FEHLER__] [19:15:48] [ hilfreich.Load_txt ] Die Einstellungsdatei kann nicht geöffnet oder geschlossen werden.
+[Warnung] [19:15:48] [ hilfreich.Load_txt ] path_load existiert nicht
+[Warnung] [19:15:48] [ hilfreich.Load_txt ] path_save existiert nicht
+[Warnung] [19:15:48] [ hilfreich.Load_txt ] rename existiert nicht

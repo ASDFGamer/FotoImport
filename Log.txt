@@ -1,0 +1,91 @@
+[Info] [0:49:25] [ main.Main ] Start
+[Info] [0:49:25] [ hilfreich.Load_txt ] Versucht die Eintellungen zu laden
+[Info] [0:49:25] [ hilfreich.Load_txt ] path_load:C:\\test
+[Info] [0:49:25] [ hilfreich.Load_txt ] path_save:C:\\test2
+[Info] [0:49:25] [ hilfreich.Load_txt ] rename:false
+[Info] [0:49:26] [ main.GUI ] Alle Bilder sollen importiert werden.
+[Info] [0:49:26] [ main.Copy_File ] Copy_File wurde erstellt
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei kein_name
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/kein_name/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner kein_name ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/kein_name/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/kein_name/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/kein_name/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner kein_name ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/kein_name/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/kein_name/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/kein_name/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Name
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Name ist die Datei test
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name/test/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name/test/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name/test/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Name/test/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name/test/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name/test/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Name/test/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Name 22.33.44
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%2022.33.44/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Name 22.33.44 ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%2022.33.44/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name%2022.33.44/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Name%2022.33.44/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Name 22.33.44 ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%2022.33.44/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name%2022.33.44/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Name%2022.33.44/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Name te
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%20te/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Name te ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%20te/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name%20te/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Name%20te/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Name te ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Name%20te/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Name%20te/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Name%20te/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Namee
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Namee/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Namee ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Namee/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Namee/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Namee/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Namee ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Namee/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Namee/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Namee/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Names
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Names/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Names ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Names/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Names/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Names/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Names ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Names/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Names/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Names/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei Ordner
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Ordner/ ist ein Ordner
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Ordner ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Ordner/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Ordner/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/Ordner/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner Ordner ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/Ordner/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/Ordner/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/Ordner/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei sdf.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/sdf.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/sdf.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf.txt nach file:///C:/test2/kein_name/sdf.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei sdf2.txt
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/sdf2.txt ist eine Datei
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test2/kein_name/sdf2.txt das Ziel
+[__FEHLER__] [0:49:26] [ main.Copy_File ] Das kopieren der Datei sdf2.txt nach file:///C:/test2/kein_name/sdf2.txt hat nicht geklappt.
+[Info] [0:49:26] [ main.Copy_File ] im Ordner test ist die Datei zzz
+[Debug] [0:49:26] [ main.Copy_File ] file:///C:/test/zzz/ ist ein Ordner
+[__FEHLER__] [0:49:26] [ main.GUI ] Es wurden nicht alle Bilder importiert!
+[Info] [0:49:31] [ main.Main ] Close
