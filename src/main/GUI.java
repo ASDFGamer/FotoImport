@@ -127,6 +127,7 @@ public class GUI {
 	    copy_progress.setSelection(0);
 	    //erstellt ein 'Tag' mit dem Namen.
 	    copy_progress.setData("Name", "copy_progress");
+	    obj.setcopybar(copy_progress);
 	    
 	    //Fügt einen Event Listener zu dem Button hinzu.
 	    bilder_import.addSelectionListener(new SelectionAdapter() {
@@ -134,7 +135,7 @@ public class GUI {
 	        public void widgetSelected(SelectionEvent e) {
 	            log.write("Alle Bilder sollen importiert werden.");
 	            copy_progress.setSelection(0);
-	            if (obj.import_all(copy_progress)){
+	            if (obj.import_all()){
 	            	log.write("Alle Bilder wurden importiert.");
 	            	bilder_import.setBackground(display.getSystemColor(SWT.COLOR_GREEN));
 	            }else{

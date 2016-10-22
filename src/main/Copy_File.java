@@ -8,8 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.eclipse.swt.widgets.ProgressBar;
-
 import hilfreich.Log;
 
 /**
@@ -45,6 +43,12 @@ public class Copy_File extends File_utils{
 	private int files_copyed = 0;
 	
 	/**
+	 * Hier kann das Objekt abgelegt werden, welches Copy_File aufgerufen hat.
+	 * @since 0.5
+	 */
+	private Main obj;
+	
+	/**
 	 * Der Log für die anzeige von Nachrichten.
 	 * @since 0.1
 	 */
@@ -57,6 +61,17 @@ public class Copy_File extends File_utils{
 	 * @since 0.1
 	 */
 	public Copy_File(){
+		init();
+	}
+	
+	/**
+	 * Dies ist ein Konstruktor welcher als Argument ein Main-Objekt nimmt.
+	 * (Häufig das aufrufende Objekt)
+	 * @param object ein Main-Objekt
+	 * @since 0.5
+	 */
+	public Copy_File(Main object){
+		obj=object;
 		init();
 	}
 	
@@ -114,6 +129,11 @@ public class Copy_File extends File_utils{
 	 */
 	public boolean set_rename(boolean change){
 		rename = change;
+		return true;
+	}
+	
+	public boolean set_main(Main object){
+		obj=object;
 		return true;
 	}
 	
@@ -244,6 +264,9 @@ public class Copy_File extends File_utils{
 		}
 		log.write("Es wurde die Datei " + quelle.getFileName().toString() + " nach " + ziel.getFileName().toString() + " kopiert.");
 		files_copyed=files_copyed+1;
+		if (obj!=null){
+			obj.copyprogress(files_copyed);
+		}
 		return true;
 	}
 	

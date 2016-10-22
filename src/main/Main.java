@@ -64,6 +64,24 @@ public class Main {
 	 */
 	private Copy_File copy_file;
 	
+	/**
+	 * Dies ist die Fortschrittsanzeige aus der GUI
+	 * @since 0.5
+	 */
+	private ProgressBar copybar;
+	
+	/**
+	 * Gibt die anzahl der zu kopierenen Dateien an.
+	 * @since 0.5
+	 */
+	private int files;
+	
+	/**
+	 * Ein Object vom Type Scan_Folder.
+	 * @since 0.5
+	 */
+	private Scan_Folder scanfolder;
+	
 	// Funktionen
 	/**
 	 * Standardprozedur beim Start
@@ -83,6 +101,7 @@ public class Main {
 	 * Dies setzt den Speicherpfad
 	 * @param path Der Pfad
 	 * @return true, falls alles hingehauen hat, sonst false
+	 * @since 0.1
 	 */
 	public boolean setpath_save(String path){
 		path_save=path;
@@ -93,6 +112,7 @@ public class Main {
 	 * Dies setzt den Pfad von dem die Bilder geladen werden.
 	 * @param path Der Pfad
 	 * @return true, falls alles hingehauen hat, sonst false
+	 * @since 0.1
 	 */
 	public boolean setpath_load(String path){
 		path_load=path;
@@ -103,10 +123,23 @@ public class Main {
 	 * Dies setzt den Ordnername an dem die Bilder gespeichert werden.
 	 * @param path Der Ordnername
 	 * @return true, falls alles hingehauen hat, sonst false
+	 * @since 0.1
 	 */
 	public boolean setordnername(String path){
 		ordnername=path;
 		return true;
+	}
+	
+	/**
+	 * Dies setzt die Fortschritsanzeige
+ 	 * @param copyprogress Eine Forschrittsanzeige
+	 * @return true, falls alles hingehauen hat, sonst false
+	 * @since 0.5
+	 */
+	public boolean setcopybar(ProgressBar copyprogress){
+		copybar=copyprogress;
+		return true;
+		
 	}
 	
 	// Getter
@@ -114,6 +147,7 @@ public class Main {
 	/**
 	 * Gibt den Speicherpfad zurück.
 	 * @return Der Speicherpfad
+	 * @since 0.1
 	 */
 	public String getpath_save(){
 		return path_save;
@@ -122,6 +156,7 @@ public class Main {
 	/**
 	 * Gibt den Ordnernamen zurück.
 	 * @return Der Ordnername
+	 * @since 0.1
 	 */
 	public String getordnername(){
 		return ordnername;
@@ -130,9 +165,19 @@ public class Main {
 	/**
 	 * Gibt den Pfad von dem die Bilder geladen werden zurück.
 	 * @return Der Pfad von dem die Bilder geladen werden
+	 * @since 0.1
 	 */
 	public String getpath_load(){
 		return path_load;
+	}
+	
+	/**
+	 * Dies gibt die zugewiesene Fortschrittsanzeige zurück.
+	 * @return  Die zugewiesene Fortschrittsanzeige
+	 * @since 0.5
+	 */
+	public ProgressBar getcopybar(){
+		return copybar;
 	}
 	
 	// andere Funktionen
@@ -146,6 +191,7 @@ public class Main {
 		path_load = load_save.load.load_str("path_load");
 		path_save = load_save.load.load_str("path_save");
 		rename = load_save.load.load_bool("rename");
+		scanfolder = new Scan_Folder(path_load);
 		gui = new GUI(this);
 		gui.open();
 		log.write("Close");
@@ -168,14 +214,12 @@ public class Main {
 	 * @return true, falls alles gut ging, sonstz false.
 	 * @since 0.1
 	 */
-	public boolean import_all(ProgressBar copybar){
+	public boolean import_all(){
+		files = scanfolder.Filecount();
 		copy_file = new Copy_File();
 		copy_file.set_source(path_load);
 		copy_file.set_rename(rename);
 		copy_file.set_destination(path_save+"\\"+ordnername);//TODO Win-specific
-		
-		//copybar.setSelection(20);
-		//TODO einen Weg finden um bei änderungen auf files_copyed zuzugreifen (Listener?)
 		if (copy_file.copyfolder()){
 			return true;
 		} else {
@@ -183,5 +227,9 @@ public class Main {
 		}
 	}
 	
+	public boolean copyprogress(int already_copyed){
+		copybar.setSelection((int)(already_copyed/files));
+		return true;
+	}
 	
 }
