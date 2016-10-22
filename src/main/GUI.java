@@ -110,15 +110,13 @@ public class GUI {
 			}
 	    	
 	    });
-	    
-	    
+
 	    // erstelle einen Button, der alle Bilder importiert.
 	    Button bilder_import = new Button(shell, SWT.PUSH);
 	    bilder_import.setText("Alle Bilder importieren");
 	    bilder_import.setFont( default_font );
 	    bilder_import.setToolTipText("Mit diesem Knopf kopiert du alle Bilder in den Ordner den du oben angegeben hast.");
 	    bilder_import.setLayoutData(new GridData(SWT.CENTER, SWT.TOP, false, false, 3,1));
-
 	    
 	    // erstelle einen Ladebalken, der den jetzigen Zustand des Kopiervorganges anzeigt.
 	    ProgressBar copy_progress = new ProgressBar(shell, SWT.SMOOTH);
@@ -143,7 +141,7 @@ public class GUI {
 	            	bilder_import.setBackground(display.getSystemColor(SWT.COLOR_RED));
 	            }
 	        }
-	    });	
+	    });
 	    
 	    // Erstelle ein neues Label, das als Separator benutzt wird.
 	    Label seperator2 = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
@@ -214,7 +212,7 @@ public class GUI {
 		Shell shell_help = new Shell(display);
 		shell_help.setFont(default_font);
 		shell_help.setText("Hilfe zu Foto Import");
-		shell_help.setSize(1000,300);
+		shell_help.setSize(1000,350);
 		
 		//Layout
 		RowLayout layout_help = new RowLayout();

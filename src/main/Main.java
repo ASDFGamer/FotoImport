@@ -5,6 +5,9 @@ package main;
 
 
 
+import java.io.File;
+import java.io.IOException;
+
 import org.eclipse.swt.widgets.ProgressBar;
 
 import hilfreich.*;
@@ -35,10 +38,18 @@ public class Main {
 	 */
 	private String ordnername = "kein_name";
 	
-	/**Gibt an, ob die Dateien umbenannt werden sollen.
+	/**
+	 * Gibt an, ob die Dateien umbenannt werden sollen.
 	 * @since 0.5
 	 */
 	private boolean rename = true;
+	
+	/**
+	 * Gibt den Filemanager an der geööfnet werden soll, nachdem die Bilder importiert wurden.
+	 * Wenn filemanager = null, dann wird nichts geöffnet.
+	 * @since 0.5
+	 */
+	private String filemanager = null;
 	
 	/**
 	 * Wird benutzt, um die Einstellungen zu laden und zu speichern.
@@ -101,7 +112,6 @@ public class Main {
 	 * Dies setzt den Speicherpfad
 	 * @param path Der Pfad
 	 * @return true, falls alles hingehauen hat, sonst false
-	 * @since 0.1
 	 */
 	public boolean setpath_save(String path){
 		path_save=path;
@@ -112,7 +122,6 @@ public class Main {
 	 * Dies setzt den Pfad von dem die Bilder geladen werden.
 	 * @param path Der Pfad
 	 * @return true, falls alles hingehauen hat, sonst false
-	 * @since 0.1
 	 */
 	public boolean setpath_load(String path){
 		path_load=path;
@@ -123,7 +132,6 @@ public class Main {
 	 * Dies setzt den Ordnername an dem die Bilder gespeichert werden.
 	 * @param path Der Ordnername
 	 * @return true, falls alles hingehauen hat, sonst false
-	 * @since 0.1
 	 */
 	public boolean setordnername(String path){
 		ordnername=path;
@@ -147,7 +155,6 @@ public class Main {
 	/**
 	 * Gibt den Speicherpfad zurück.
 	 * @return Der Speicherpfad
-	 * @since 0.1
 	 */
 	public String getpath_save(){
 		return path_save;
@@ -156,7 +163,6 @@ public class Main {
 	/**
 	 * Gibt den Ordnernamen zurück.
 	 * @return Der Ordnername
-	 * @since 0.1
 	 */
 	public String getordnername(){
 		return ordnername;
@@ -165,7 +171,6 @@ public class Main {
 	/**
 	 * Gibt den Pfad von dem die Bilder geladen werden zurück.
 	 * @return Der Pfad von dem die Bilder geladen werden
-	 * @since 0.1
 	 */
 	public String getpath_load(){
 		return path_load;
@@ -191,6 +196,7 @@ public class Main {
 		path_load = load_save.load.load_str("path_load");
 		path_save = load_save.load.load_str("path_save");
 		rename = load_save.load.load_bool("rename");
+		filemanager = load_save.load.load_str("filemanager");
 		scanfolder = new Scan_Folder(path_load);
 		gui = new GUI(this);
 		gui.open();
@@ -205,6 +211,7 @@ public class Main {
 		load_save.save.save("path_load", path_load);
 		load_save.save.save("path_save", path_save);
 		load_save.save.save("rename", rename);
+		load_save.save.save("filemanager", filemanager);
 		log.write("Alle Variablen aus 'Main' wurden gespeichert.");
 		return true;
 	}
@@ -216,20 +223,35 @@ public class Main {
 	 */
 	public boolean import_all(){
 		files = scanfolder.Filecount();
-		copy_file = new Copy_File();
+		copy_file = new Copy_File(this);
 		copy_file.set_source(path_load);
+		copy_file.set_destination(path_save+File.separator+ordnername);
 		copy_file.set_rename(rename);
-		copy_file.set_destination(path_save+"\\"+ordnername);//TODO Win-specific
-		if (copy_file.copyfolder()){
+		Runtime runtime = Runtime.getRuntime();
+		boolean result = copy_file.copyfolder();
+		try {
+			runtime.exec(filemanager+" "+path_save+File.separator+ordnername);
+			log.write("Der Filemanager wurde geöffnet.");
+		} catch (IOException e) {
+			log.write("Der Filemanager konnte nicht geöffnet werden.",1);
+		}
+		if (result){
 			return true;
 		} else {
 			return false;
 		}
 	}
 	
+	/**
+	 * Aktualisert die Fortschrittsanzeige auf already_copyed/files
+	 * @param already_copyed Anzahl der schon kopierten Dateien
+	 * @return true, falls alles gut ging, sonst false
+	 * @since 0.5
+	 */
 	public boolean copyprogress(int already_copyed){
 		copybar.setSelection((int)(already_copyed/files));
 		return true;
 	}
+	
 	
 }

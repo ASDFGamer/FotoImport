@@ -138,7 +138,7 @@ public class Load_txt{
 			return false;
 		}
 		
-		//Schließt die Datei. (geht nicht da der BufferedReader in try initialisiert werden muss und deshalb außerhalb des geltungbereiches ist.
+		//TODO Schließt die Datei. (geht nicht da der BufferedReader in try initialisiert werden muss und deshalb außerhalb des geltungbereiches ist.
 		/*try {
 			einstellungen.;
 		} catch (IOException | NullPointerException e) {
@@ -207,13 +207,5 @@ public class Load_txt{
 			log.write(name + " existiert nicht", 1);
 			return false;
 		}
-	}
-	
-	/**
-	 * Nur für reine Debugzwecke
-	 * TODO wenn fertig löschen.
-	 */
-	public void nothing(){
-		//
 	}
 }

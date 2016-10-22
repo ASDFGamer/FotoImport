@@ -132,6 +132,12 @@ public class Copy_File extends File_utils{
 		return true;
 	}
 	
+	/**
+	 * Fügt ein verweis auf ein Objekt hinzu.
+	 * @param object ein Objekt des Typs Main
+	 * @return true, falls alles gut ging sonst false.
+	 * @since 0.5
+	 */
 	public boolean set_main(Main object){
 		obj=object;
 		return true;
@@ -167,12 +173,21 @@ public class Copy_File extends File_utils{
 	}
 	
 	/**
-	 * Dies wird verwendet um abzzufragen, wie viele Dateien schon kopiert wurden.
+	 * Dies wird verwendet um abzufragen, wie viele Dateien schon kopiert wurden.
 	 * @return die Anzahl der kopierten Dateien
 	 * @since 0.5
 	 */
 	public int get_files_copyed(){
 		return files_copyed;
+	}
+	
+	/**
+	 * Gibt das Objekt zurück, welches hinzugefügt wurde.
+	 * @returnas Objekt zurück, welches hinzugefügt wurde
+	 * @since 0.5
+	 */
+	public Main get_obj(){
+		return obj;
 	}
 	
 	//andere Funktionen
@@ -307,4 +322,27 @@ public class Copy_File extends File_utils{
 		}
 	}
 	
+	/**
+	 * Dies überprüft, ob ein Pfad existiert und erstellt ihn, falls er noch nicht existiert.
+	 * @since 0.1
+	 */
+	public void check_folder_exist(Path pfad){
+		if (!Files.isDirectory(pfad)){
+			if(!pfad.toFile().mkdirs()){
+				log.write("Es konnte nicht die gesamte Ordnerstruktur von " + pfad.toUri() + " erstellt werden.",1); //TODO? Ordner trotzdem mit "name"2 erstellen und dann den Pfad ändern.
+			};
+		}
+		
+	}
+	
+	/**
+	 * Diese Funktion überprüft, ob es sich bei der Datei auf die der Pfad zeigt um ein Duplikat von einer schon kopierten Datei handelt.
+	 * @param pfad Der Pfad der Datei
+	 * @return true, falls es ein Duplikat ist und false, falls es kein Duplikat ist.
+	 * @since 0.5
+	 */
+	public boolean check_duplicat(Path pfad){
+		//pfad.ha
+		return true;
+	}
 }
