@@ -33,7 +33,7 @@ public class Log {
 	/**
 	 * Das Logginglevel, noch nicht von außerhalb zu ändern.
 	 */
-	static private int std_level=-1;//TODO auf 0 �ndern, wenn fertig
+	static private int std_level=-1;//TODO auf 0 ändern, wenn fertig
 	private int level=std_level;
 	
 	Calendar rightNow = Calendar.getInstance();
@@ -417,7 +417,7 @@ public class Log {
 		//rightNow.get(rightNow.MINUTE)
 		if (zeitangabe){
 			rightNow = Calendar.getInstance(); //Geht vllt. effizienter
-			return  "[" +rightNow.get(Calendar.HOUR_OF_DAY)+ ":" +rightNow.get(Calendar.MINUTE)+":"+rightNow.get(Calendar.SECOND) +"] ";
+			return  "[%02d:%02d:%02d]".formatted(rightNow.get(Calendar.HOUR_OF_DAY),rightNow.get(Calendar.MINUTE),rightNow.get(Calendar.SECOND));
 		} else {
 			return  "";
 		}
