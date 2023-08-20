@@ -1,4 +1,4 @@
-package hilfreich;
+package org.asdfgamer.foto_import.hilfreich;
 
 import java.io.FileWriter;
 import java.io.IOException;

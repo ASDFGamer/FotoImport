@@ -1,8 +1,8 @@
-package main;
+package org.asdfgamer.foto_import;
 
 import java.io.File;
 
-import hilfreich.Log;
+import org.asdfgamer.foto_import.hilfreich.Log;
 
 /**
  * Diese Klasse soll einen Ordner nach bestimmten Eigenschaften durchsuchen können.

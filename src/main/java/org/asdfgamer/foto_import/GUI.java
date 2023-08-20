@@ -1,4 +1,4 @@
-package main;
+package org.asdfgamer.foto_import;
 
 
 
@@ -11,7 +11,7 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
 
-import hilfreich.Log;
+import org.asdfgamer.foto_import.hilfreich.Log;
 
 /**
  * Diese Klasse ist für die Darstellung des GUIs zuständig mithilfe von SWT

@@ -1,9 +1,9 @@
-package main;
+package org.asdfgamer.foto_import;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import hilfreich.Log;
+import org.asdfgamer.foto_import.hilfreich.Log;
 
 /**
  * Diese Klasse soll viele verschiedene Funktionen haben, welche häufig bei Dateien/Ordnern gebraucht werden.

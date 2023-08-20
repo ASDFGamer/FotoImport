@@ -1,4 +1,4 @@
-package main;
+package org.asdfgamer.foto_import;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import hilfreich.Log;
+import org.asdfgamer.foto_import.hilfreich.Log;
 
 /**
  * Diese Klasse soll für das kopieren von Dateien und Ordnern zuständig sein.

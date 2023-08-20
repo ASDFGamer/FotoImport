@@ -1,4 +1,4 @@
-package hilfreich;
+package org.asdfgamer.foto_import.hilfreich;
 
 import java.util.Calendar;
 import java.io.*;
@@ -33,7 +33,7 @@ public class Log {
 	/**
 	 * Das Logginglevel, noch nicht von auÃŸerhalb zu Ã¤ndern.
 	 */
-	static private int std_level=-1;//TODO auf 0 ändern, wenn fertig
+	static private int std_level=-1;//TODO auf 0 ï¿½ndern, wenn fertig
 	private int level=std_level;
 	
 	Calendar rightNow = Calendar.getInstance();
@@ -362,7 +362,7 @@ public class Log {
 	}
 	
 	/**
-	 * Dies überprüft, ob die Lognachricht unter dem eingetellten Logginglivel liegt und gibt dann false zurück, sonst true.
+	 * Dies ï¿½berprï¿½ft, ob die Lognachricht unter dem eingetellten Logginglivel liegt und gibt dann false zurï¿½ck, sonst true.
 	 * @param status Das Loglevel der Nachricht.
 	 * @return True, wenn status>= Loggonglevel, sonst false.
 	 */
@@ -376,12 +376,12 @@ public class Log {
 	}
 	
 	/**
-	 * Dies schreibt den Text für die Datei und die Konsole.
+	 * Dies schreibt den Text fï¿½r die Datei und die Konsole.
 	 * Am besten nur von dateiWrite und consoleWrite aufrufen.
-	 * @param info Der Text, der übertragen wurde
+	 * @param info Der Text, der ï¿½bertragen wurde
 	 * @param status Der Status als int
 	 * @return Der Text der ausgegeben werden soll
-	 * TODO Anzeige der Klasse ändern?
+	 * TODO Anzeige der Klasse ï¿½ndern?
 	 */
 	private String Logtext(String info, int status){
 		String text= Statusabfrage(status)+Zeitabfrage(zeitangabe)+"[ "+klasse+" ] "+ info;

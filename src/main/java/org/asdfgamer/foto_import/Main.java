@@ -1,13 +1,13 @@
 /**
  * 
  */
-package main;
+package org.asdfgamer.foto_import;
 
 
 
 import org.eclipse.swt.widgets.ProgressBar;
 
-import hilfreich.*;
+import org.asdfgamer.foto_import.hilfreich.*;
 
 /**
  * Dies ist ein Programm, mit dem Fotos importiert werden können.

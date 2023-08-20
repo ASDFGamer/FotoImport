@@ -1,4 +1,4 @@
-package hilfreich;
+package org.asdfgamer.foto_import.hilfreich;
 
 /**
  * Dies soll als Überklasse für die Load und Save Klassen sein.
